@@ -43,12 +43,6 @@ import from walkers.tasks {
     SetMoveInfo,
     DeleteTask
 }
-import from walkers.log {
-    ListLogEntries,
-    LogActivity,
-    UpdateLogEntry,
-    DeleteLogEntries
-}
 import from walkers.workflow {
     GetWorkflow,
     ApplyTemplate,
@@ -74,6 +68,7 @@ import from walkers.github {
     SyncGithub
 }
 import from walkers.insights { Digest }
+import from walkers.relay { RelayThreads }
 import from walkers.assistant { AskAssistant, WriteStandup, ProposeAction }
 
 def:pub app(children: any) -> JsxElement {

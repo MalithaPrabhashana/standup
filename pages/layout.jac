@@ -50,7 +50,7 @@ def:pub Shell -> JsxLayout {
             {if chrome {
                 <header key="nav" className="border-b">
                     <nav className="flex items-center gap-4 px-6 py-3 lg:px-10">
-                        <Link to="/board" className="mr-2 flex items-center gap-2">
+                        <Link to="/relay" className="mr-2 flex items-center gap-2">
                             <img
                                 src="/static/brand/logo-mark.svg"
                                 alt=""
@@ -64,14 +64,13 @@ def:pub Shell -> JsxLayout {
                                 <span className="text-primary ml-0.5">.</span>
                             </span>
                         </Link>
+                        <Link to="/relay" className={navClass("/relay")}>Relay</Link>
+                        <Link to="/flow" className={navClass("/flow")}>Flow</Link>
+                        <Link to="/you" className={navClass("/you")}>You</Link>
                         <Link to="/workflow" className={navClass("/workflow")}>
                             Workflow
                         </Link>
                         <Link to="/board" className={navClass("/board")}>Board</Link>
-                        <Link to="/overview" className={navClass("/overview")}>
-                            Overview
-                        </Link>
-                        <Link to="/log" className={navClass("/log")}>Log</Link>
                         <Link to="/workspace" className={navClass("/workspace")}>
                             Workspace
                         </Link>

@@ -45,6 +45,19 @@
     --sidebar-accent-foreground: #14120F;
     --sidebar-border: #EFE9DE;
     --sidebar-ring: #E8552F;
+
+    /* Relay health encoding. Three states, one meaning each, used identically
+       on every screen: nobody holding it (crit), past its clock (warn),
+       within its clock (good). Never colour-alone — every pill carries a
+       word too, so the state survives greyscale and colour blindness. */
+    --relay-crit: #B32D22;
+    --relay-crit-soft: #FAE7E4;
+    --relay-warn: #8A5206;
+    --relay-warn-soft: #FBEEDC;
+    --relay-good: #1C6647;
+    --relay-good-soft: #E1F0E9;
+    --relay-accent: #2A55C4;
+    --relay-accent-soft: #E7EDFB;
 }
 
 .dark {
@@ -84,6 +97,18 @@
     --sidebar-accent-foreground: #E6EDEB;
     --sidebar-border: rgba(230, 237, 235, .12);
     --sidebar-ring: #2DD4BF;
+
+    /* Dark is a re-step of the same ramps against the pine ground, not an
+       inversion: the soft fills go dark and the inks go bright, so contrast
+       holds in both themes. */
+    --relay-crit: #F0837A;
+    --relay-crit-soft: #3A2220;
+    --relay-warn: #E0A758;
+    --relay-warn-soft: #35291A;
+    --relay-good: #4FBF8E;
+    --relay-good-soft: #16302A;
+    --relay-accent: #8FA9F5;
+    --relay-accent-soft: #1F2740;
 }
 
 @theme inline {
