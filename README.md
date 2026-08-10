@@ -35,7 +35,15 @@ is why renaming a step never changes how anything behaves.
 - **Multi-assignee tasks**, free-text categories and tags, repos attached to projects
 - **GitHub, on demand**: install the app on the repos you choose, import issues
   as tasks, watch pull-request state on the cards, and open an issue from a task
-- **An Overview tab** with headline numbers, per-project progress and per-person activity
+- **Relay**, three views over work that nobody maintains by hand. Every thread is
+  derived live from GitHub and answers the same five questions at all times: which
+  bet it serves, whose hands it is in, what they owe (build, judge or validate),
+  how long they have held it, and who signs it off. `/relay` is the leadership
+  view (bets, what needs you, what is breaking), `/flow` is the lead's view (load
+  per person, work grouped by what is owed, and the routes each kind of work
+  travels), and `/you` is one person's batons plus the delays that are provably
+  not theirs. Nothing is imported or stored, so nothing can go stale, and a
+  thread nobody is holding is surfaced as an incident rather than hidden in a column
 - **An assistant** that reads the whole workspace and writes the standup note for
   you, answers questions about your own board, and turns "add a task for Nadia on
   the docs site" into a suggestion you confirm before anything is written

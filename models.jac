@@ -301,6 +301,31 @@ obj TaskView {
         pr_state: str = "";
 }
 
+# One unit of work, derived live from GitHub and never persisted.
+#
+# The Relay model: every thread answers the same five questions at all times.
+# `bet` and `kind` are DECLARED once (as GitHub labels); holder, owed, age and
+# health are DERIVED from GitHub events. Nothing here is maintained by hand,
+# so nothing here can go stale.
+obj RelayThread {
+    has number: int,
+        title: str,
+        url: str,
+        # declared, once, via labels
+        bet: str = "",
+        kind: str = "",
+        # derived, every read
+        holder: str = "",          # "" means nobody holds it: an incident
+        owed: str = "",            # build | judge | validate | none
+        stage: str = "",           # human label for the derived position
+        age_hours: float = 0.0,    # how long it has sat in this pair of hands
+        clock_hours: float = 0.0,  # what we agreed is acceptable
+        health: str = "ok",        # ok | late | unowned
+        pr_number: int = 0,
+        pr_state: str = "",
+        why: str = "";             # the arithmetic, so a status can be clicked open
+}
+
 obj MemberView {
     has id: str,
         name: str,
